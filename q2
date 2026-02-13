@@ -1,0 +1,17 @@
+function plot_yt(n, t, titlem, func_x)
+           
+    func_y = 2*func_x;      
+    
+    subplot(4,2,n);
+    plot(t, func_y, 'LineWidth', 2);
+    grid on;
+    xlabel('t');
+    ylabel('y(t)');
+    title(titlem);
+end
+
+
+
+t = 0:0.001:10;
+
+plot_yt(1, t, 'y(t)', sin((2*t*pi)/10));
